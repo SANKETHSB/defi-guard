@@ -1,0 +1,220 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: oklch(0.98 0.01 106.42);
+  --foreground: oklch(0.145 0.05 250.29);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0.05 250.29);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0.05 250.29);
+  --primary: oklch(0.6 0.2 180);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0.01 106.42);
+  --secondary-foreground: oklch(0.205 0.05 250.29);
+  --muted: oklch(0.97 0.01 106.42);
+  --muted-foreground: oklch(0.556 0.03 250.29);
+  --accent: oklch(0.95 0.02 180);
+  --accent-foreground: oklch(0.205 0.05 250.29);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.922 0.01 106.42);
+  --input: oklch(0.922 0.01 106.42);
+  --ring: oklch(0.6 0.2 180);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.08 0.02 250.29);
+  --foreground: oklch(0.95 0.01 106.42);
+  --card: oklch(0.12 0.02 250.29);
+  --card-foreground: oklch(0.95 0.01 106.42);
+  --popover: oklch(0.12 0.02 250.29);
+  --popover-foreground: oklch(0.95 0.01 106.42);
+  --primary: oklch(0.6 0.2 180);
+  --primary-foreground: oklch(0.08 0.02 250.29);
+  --secondary: oklch(0.18 0.02 250.29);
+  --secondary-foreground: oklch(0.95 0.01 106.42);
+  --muted: oklch(0.18 0.02 250.29);
+  --muted-foreground: oklch(0.65 0.02 250.29);
+  --accent: oklch(0.2 0.03 180);
+  --accent-foreground: oklch(0.95 0.01 106.42);
+  --destructive: oklch(0.5 0.2 25);
+  --destructive-foreground: oklch(0.95 0.01 106.42);
+  --border: oklch(0.18 0.02 250.29);
+  --input: oklch(0.18 0.02 250.29);
+  --ring: oklch(0.6 0.2 180);
+  --chart-1: oklch(0.6 0.2 180);
+  --chart-2: oklch(0.7 0.15 160);
+  --chart-3: oklch(0.65 0.18 200);
+  --chart-4: oklch(0.75 0.12 140);
+  --chart-5: oklch(0.8 0.1 120);
+  --sidebar: oklch(0.12 0.02 250.29);
+  --sidebar-foreground: oklch(0.95 0.01 106.42);
+  --sidebar-primary: oklch(0.6 0.2 180);
+  --sidebar-primary-foreground: oklch(0.08 0.02 250.29);
+  --sidebar-accent: oklch(0.18 0.02 250.29);
+  --sidebar-accent-foreground: oklch(0.95 0.01 106.42);
+  --sidebar-border: oklch(0.18 0.02 250.29);
+  --sidebar-ring: oklch(0.6 0.2 180);
+}
+
+@theme inline {
+  --font-inter: var(--font-inter);
+  --font-space-grotesk: var(--font-space-grotesk);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+/* Enhanced gradient backgrounds with better visual appeal */
+.bg-gradient-mesh {
+  background: linear-gradient(
+    135deg,
+    oklch(0.08 0.02 250.29) 0%,
+    oklch(0.12 0.03 240) 25%,
+    oklch(0.15 0.04 230) 50%,
+    oklch(0.18 0.03 220) 75%,
+    oklch(0.12 0.02 250.29) 100%
+  );
+  position: relative;
+}
+
+.bg-gradient-mesh::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(34, 197, 94, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(168, 85, 247, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 60% 30%, rgba(249, 115, 22, 0.04) 0%, transparent 50%);
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(-1deg);
+  }
+}
+
+/* Teal gradient background for sections */
+.bg-teal-gradient {
+  background: linear-gradient(
+    135deg,
+    oklch(0.6 0.2 180) 0%,
+    oklch(0.65 0.18 175) 25%,
+    oklch(0.7 0.16 170) 50%,
+    oklch(0.65 0.18 175) 75%,
+    oklch(0.6 0.2 180) 100%
+  );
+}
+
+/* Enhanced blockchain-themed visual elements */
+.blockchain-pattern {
+  background-image: linear-gradient(45deg, transparent 40%, rgba(96, 165, 250, 0.1) 50%, transparent 60%),
+    linear-gradient(-45deg, transparent 40%, rgba(34, 197, 94, 0.1) 50%, transparent 60%);
+  background-size: 20px 20px;
+  animation: blockchain-flow 15s linear infinite;
+}
+
+@keyframes blockchain-flow {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 40px 40px, -40px 40px;
+  }
+}
+
+/* Glass morphism effects */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass-effect {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.dark .hover-lift:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
